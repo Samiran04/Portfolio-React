@@ -53,19 +53,45 @@ class Home extends Component {
 
             <p className="par">
               ShowUp is a web application where you can build your portfolis
-              easily which makes you look like a professional. These can
+              easily which makes
               <br />
-              be use in jobs to showcase your skills in a eye pleasing and
-              systematic manner which
-              <br /> can make you standout from others. You can build each
-              component as you wish in free of cost.
+              you look like a professional. These can be use in jobs to showcase
+              your skills
+              <br /> in a eye pleasing and systematic manner which can make you
+              standout
+              <br /> from others. You can build each component as you wish in
+              free of cost.
             </p>
 
             <button className="cn">
               <a href="#">JOIN US</a>
             </button>
+
+            <div class="form">
+              <h2>Login Here</h2>
+              <input type="email" name="email" placeholder="Enter Email Here" />
+              <input
+                type="password"
+                name=""
+                placeholder="Enter Password Here"
+              />
+              <button className="btnn">
+                <a href="#">Login</a>
+              </button>
+              <p className="link">
+                Dont't have an account
+                <br />
+                <a href="#">Sign up </a>here
+              </p>
+              <p className="liw">Log in with</p>
+
+              <div className="icon">
+                <a href="#"></a>
+              </div>
+            </div>
           </div>
         </div>
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
       </div>
     );
   }

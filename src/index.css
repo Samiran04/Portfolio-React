@@ -192,6 +192,10 @@ ul li a :hover {
   padding: 25px;
 }
 
+.form2 {
+  height: 450px;
+}
+
 .form h2 {
   width: 220px;
   font-family: sans-serif;
@@ -267,4 +271,25 @@ ul li a :hover {
   padding-top: 15px;
   padding-bottom: 10px;
   text-align: center;
+}
+
+/*Home*/
+
+.prof {
+  background-image: url("./images/handshake.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 800px;
+  position: absolute;
+}
+
+.stud {
+  background-image: url("./images/student.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  width: 500px;
+  position: absolute;
+  left: 800px;
 }

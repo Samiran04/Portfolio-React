@@ -282,14 +282,112 @@ ul li a :hover {
   height: 400px;
   width: 800px;
   position: absolute;
+  top: 300px;
+  cursor: pointer;
+}
+
+.prof-hide {
+  text-align: center;
+  color: white;
+  line-height: 400px;
+  font-size: 60px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  height: 400px;
+  width: 800px;
+  position: absolute;
+  top: 300px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(0, 0, 0, 0.8) 50%
+  );
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.8s ease;
+}
+
+.prof-hide:hover {
+  opacity: 1;
 }
 
 .stud {
   background-image: url("./images/student.jpg");
   background-size: cover;
   background-position: center;
-  height: 600px;
-  width: 500px;
+  height: 700px;
+  width: 548px;
   position: absolute;
   left: 800px;
+  top: 300px;
+  cursor: pointer;
+}
+
+.stud-hide {
+  text-align: center;
+  color: white;
+  line-height: 700px;
+  font-size: 60px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  height: 700px;
+  width: 548px;
+  position: absolute;
+  left: 800px;
+  top: 300px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(0, 0, 0, 0.8) 50%
+  );
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.8s ease;
+}
+
+.stud-hide:hover {
+  opacity: 1;
+}
+
+.roles {
+  background-image: url("./images/cource2.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 800px;
+  position: absolute;
+  top: 700px;
+  cursor: pointer;
+}
+
+.roles-hide {
+  text-align: center;
+  color: white;
+  line-height: 300px;
+  font-size: 60px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  height: 300px;
+  width: 800px;
+  position: absolute;
+  top: 700px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(0, 0, 0, 0.8) 50%
+  );
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.8s ease;
+}
+
+.roles-hide:hover {
+  opacity: 1;
+}
+
+/*Logo*/
+
+.logo-div {
+  width: 200px;
+  height: 100px;
+  background: url("./images/logo.png");
+  background-size: cover;
+  background-position: center;
 }

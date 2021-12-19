@@ -10,14 +10,14 @@ class SignIn extends Component {
           <div className="navbar">
             <div className="icon">
               <div className="logo">
-                <b>ShowUp</b>
+                <b>Moderno</b>
               </div>
             </div>
 
             <div className="menu">
               <ul>
                 <li>
-                  <a href="#">HOME</a>
+                  <a href="/">HOME</a>
                 </li>
                 <li>
                   <a href="#">ABOUT</a>

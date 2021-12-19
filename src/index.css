@@ -382,6 +382,36 @@ ul li a :hover {
   opacity: 1;
 }
 
+/*home navbar*/
+
+.home_nav {
+  height: 100px;
+  width: 1349px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-details {
+  display: flex;
+  height: 100px;
+  width: 220px;
+  justify-content: space-between;
+}
+
+.nav-details div {
+  padding-top: 40px;
+  padding-right: 25px;
+  font-size: 17px;
+  font-family: Arial;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-details div a {
+  text-decoration: none;
+  color: black;
+}
+
 /*Logo*/
 
 .logo-div {
@@ -390,4 +420,18 @@ ul li a :hover {
   background: url("./images/logo.png");
   background-size: cover;
   background-position: center;
+}
+
+/*details*/
+.gen-details {
+  font-size: 35px;
+  padding-top: 20px;
+}
+
+.gen-details p {
+  padding-left: 100px;
+  font-family: wfont_473af4_fee8fbf1b47b4fb88dcce5054ccf03aa,
+    wf_fee8fbf1b47b4fb88dcce5054, orig_noedisplaymedium;
+  line-height: 45px;
+  font-weight: bold;
 }

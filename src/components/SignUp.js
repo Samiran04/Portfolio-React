@@ -9,7 +9,7 @@ class SignUp extends Component {
           <div className="navbar">
             <div className="icon">
               <div className="logo">
-                <b>ShowUp</b>
+                <b>Moderno</b>
               </div>
             </div>
 
@@ -88,7 +88,7 @@ class SignUp extends Component {
               <p className="link">
                 Already have an account?
                 <br />
-                <Link to="sign-in">Login in </Link>here
+                <Link to="/sign-in">Login in </Link>here
               </p>
               <p className="liw">Sign up with</p>
 

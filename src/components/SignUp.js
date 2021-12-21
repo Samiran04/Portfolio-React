@@ -2,7 +2,43 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 class SignUp extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      email: "",
+      password: "",
+      confirm_password: "",
+      name: "",
+    };
+  }
+
+  handleEmail = (e) => {
+    this.setState({
+      email: e.target.value,
+    });
+  };
+
+  handlePassword = (e) => {
+    this.setState({
+      password: e.target.value,
+    });
+  };
+
+  handleConfirmPassword = (e) => {
+    this.setState({
+      confirm_password: e.target.value,
+    });
+  };
+
+  handleName = (e) => {
+    this.setState({
+      name: e.target.value,
+    });
+  };
   render() {
+    const { name, email, password, confirm_password } = this.state;
+    console.log(this.state);
     return (
       <div>
         <div className="main">
@@ -71,16 +107,33 @@ class SignUp extends Component {
 
             <div class="form form2">
               <h2>Signup Here</h2>
-              <input type="email" name="email" placeholder="Enter Email Here" />
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter Email Here"
+                value={email}
+                onChange={this.handleEmail}
+              />
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter Name Here"
+                value={name}
+                onChange={this.handleName}
+              />
               <input
                 type="password"
                 name=""
                 placeholder="Enter Password Here"
+                value={password}
+                onChange={this.handlePassword}
               />
               <input
                 type="password"
                 name=""
                 placeholder="Enter Confirm Password Here"
+                value={confirm_password}
+                onChange={this.handleConfirmPassword}
               />
               <button className="btnn">
                 <a href="#">Sign Up</a>

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { createUser } from "../actions/auth";
 
 class SignUp extends Component {
   constructor() {
@@ -36,9 +38,16 @@ class SignUp extends Component {
       name: e.target.value,
     });
   };
+
+  handleSignUp = (e) => {
+    const { dispatch } = this.props;
+    const { email, password, confirm_password, name } = this.state;
+
+    dispatch(createUser(email, password, confirm_password, name));
+  };
+
   render() {
     const { name, email, password, confirm_password } = this.state;
-    console.log(this.state);
     return (
       <div>
         <div className="main">
@@ -135,7 +144,7 @@ class SignUp extends Component {
                 value={confirm_password}
                 onChange={this.handleConfirmPassword}
               />
-              <button className="btnn">
+              <button className="btnn" onClick={this.handleSignUp}>
                 <a href="#">Sign Up</a>
               </button>
               <p className="link">
@@ -157,4 +166,10 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp;
+function mapStateToProps(state) {
+  return {
+    auth: state.auth,
+  };
+}
+
+export default connect(mapStateToProps)(SignUp);

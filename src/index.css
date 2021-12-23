@@ -527,3 +527,14 @@ ul li a :hover {
   top: -8px;
   left: -8px;
 }
+
+/*Warning message*/
+
+.warning {
+  text-align: center;
+  height: 50px;
+  width: 250px;
+  background-color: rgb(220, 20, 60);
+  font-weight: 600;
+  border-radius: 5px;
+}

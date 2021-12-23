@@ -2,6 +2,7 @@ import {
   USER_CREATE,
   USER_CREATE_SUCCESS,
   USER_CREATE_FAIL,
+  REMOVE_ERROR_MESSAGE,
 } from "./actionTypes";
 import { APIUrls } from "../helpers/getUrl";
 import { getFormBody } from "../helpers/utils";
@@ -12,15 +13,22 @@ export function startCreateUser() {
   };
 }
 
-export function createUserFail() {
+export function createUserFail(data) {
   return {
     type: USER_CREATE_FAIL,
+    error: data.error,
   };
 }
 
 export function createUserSuccess() {
   return {
     type: USER_CREATE_SUCCESS,
+  };
+}
+
+export function removeErrorMessage() {
+  return {
+    type: REMOVE_ERROR_MESSAGE,
   };
 }
 

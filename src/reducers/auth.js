@@ -2,6 +2,7 @@ import {
   USER_CREATE,
   USER_CREATE_SUCCESS,
   USER_CREATE_FAIL,
+  REMOVE_ERROR_MESSAGE,
 } from "../actions/actionTypes";
 
 const inititalUserState = {
@@ -37,6 +38,11 @@ export default function auth(state = inititalUserState, action) {
         isSignedUp: false,
         isLoggedIn: false,
         error: action.error,
+      };
+    case REMOVE_ERROR_MESSAGE:
+      return {
+        ...state,
+        error: null,
       };
     default:
       return {

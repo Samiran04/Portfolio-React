@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { createUser } from "../actions/auth";
+import { createUser, removeErrorMessage } from "../actions/auth";
 
 class SignUp extends Component {
   constructor() {
@@ -13,6 +13,11 @@ class SignUp extends Component {
       confirm_password: "",
       name: "",
     };
+  }
+
+  componentWillUnmount() {
+    const { dispatch } = this.props;
+    dispatch(removeErrorMessage());
   }
 
   handleEmail = (e) => {
@@ -48,6 +53,7 @@ class SignUp extends Component {
 
   render() {
     const { name, email, password, confirm_password } = this.state;
+    const { error } = this.props.auth;
     return (
       <div>
         <div className="main">
@@ -115,7 +121,13 @@ class SignUp extends Component {
             </button>
 
             <div class="form form2">
-              <h2>Signup Here</h2>
+              {error ? (
+                <div className="warning">
+                  <p>{error}</p>
+                </div>
+              ) : (
+                <h2>Signup Here</h2>
+              )}
               <input
                 type="email"
                 name="email"
@@ -152,7 +164,6 @@ class SignUp extends Component {
                 <br />
                 <Link to="/sign-in">Login in </Link>here
               </p>
-              <p className="liw">Sign up with</p>
 
               <div className="icon">
                 <a href="#"></a>

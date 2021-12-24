@@ -3,6 +3,9 @@ import {
   USER_CREATE_SUCCESS,
   USER_CREATE_FAIL,
   REMOVE_ERROR_MESSAGE,
+  CREATE_SESSION,
+  CREATE_SESSION_SUCCESS,
+  CREATE_SESSION_FAIL,
 } from "../actions/actionTypes";
 
 const inititalUserState = {
@@ -16,6 +19,7 @@ const inititalUserState = {
 export default function auth(state = inititalUserState, action) {
   switch (action.type) {
     case USER_CREATE:
+    case CREATE_SESSION:
       return {
         ...state,
         inProgress: true,
@@ -31,7 +35,17 @@ export default function auth(state = inititalUserState, action) {
         isLoggedIn: false,
         error: null,
       };
+    case CREATE_SESSION_SUCCESS:
+      return {
+        ...state,
+        inProgress: false,
+        isSignedUp: false,
+        isLoggedIn: true,
+        error: null,
+        user: action.user,
+      };
     case USER_CREATE_FAIL:
+    case CREATE_SESSION_FAIL:
       return {
         ...state,
         inProgress: false,

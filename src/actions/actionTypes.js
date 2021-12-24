@@ -1,5 +1,12 @@
+//Remove error messages
 export const REMOVE_ERROR_MESSAGE = "REMOVE_ERROR_MESSAGE";
 
+//Sign Up
 export const USER_CREATE = "USER_CREATE";
 export const USER_CREATE_SUCCESS = "USER_CREATE_SUCCESS";
 export const USER_CREATE_FAIL = "USER_CREATE_FAIL";
+
+//Log In
+export const CREATE_SESSION = "CREATE_SESSION";
+export const CREATE_SESSION_SUCCESS = "CREATE_SESSION_SUCCESS";
+export const CREATE_SESSION_FAIL = "CREATE_SESSION_FAIL";

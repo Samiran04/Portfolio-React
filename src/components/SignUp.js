@@ -45,6 +45,8 @@ class SignUp extends Component {
   };
 
   handleSignUp = (e) => {
+    e.preventDefault();
+
     const { dispatch } = this.props;
     const { email, password, confirm_password, name } = this.state;
 

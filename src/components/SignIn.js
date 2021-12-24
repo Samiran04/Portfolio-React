@@ -1,8 +1,40 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { authenticateUser } from "../actions/auth";
 
 class SignIn extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      email: "",
+      password: "",
+      error: null,
+    };
+  }
+
+  handleEmail = (e) => {
+    this.setState({
+      email: e.target.value,
+    });
+  };
+
+  handlePassword = (e) => {
+    this.setState({
+      password: e.target.value,
+    });
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    const { dispatch } = this.props;
+
+    const { email, password } = this.state;
+
+    dispatch(authenticateUser(email, password));
+  };
   render() {
     return (
       <div>
@@ -72,13 +104,19 @@ class SignIn extends Component {
 
             <div class="form">
               <h2>Login Here</h2>
-              <input type="email" name="email" placeholder="Enter Email Here" />
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter Email Here"
+                onChange={this.handleEmail}
+              />
               <input
                 type="password"
                 name=""
                 placeholder="Enter Password Here"
+                onChange={this.handlePassword}
               />
-              <button className="btnn">
+              <button className="btnn" onClick={this.handleSubmit}>
                 <a href="#">Login</a>
               </button>
               <p className="link">
@@ -100,4 +138,10 @@ class SignIn extends Component {
   }
 }
 
-export default SignIn;
+function mapStateToProps(state) {
+  return {
+    props: state,
+  };
+}
+
+export default connect(mapStateToProps)(SignIn);

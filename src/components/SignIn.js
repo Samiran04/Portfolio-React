@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { authenticateUser } from "../actions/auth";
+import { Main } from "./index";
 
 class SignIn extends Component {
   constructor() {
@@ -36,6 +37,8 @@ class SignIn extends Component {
     dispatch(authenticateUser(email, password));
   };
   render() {
+    const { isLoggedIn } = this.props.auth;
+
     return (
       <div>
         <div className="main">
@@ -140,7 +143,7 @@ class SignIn extends Component {
 
 function mapStateToProps(state) {
   return {
-    props: state,
+    auth: state.auth,
   };
 }
 

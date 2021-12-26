@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { connect } from "react-redux";
 import { createUser, removeErrorMessage } from "../actions/auth";
 
@@ -56,6 +56,15 @@ class SignUp extends Component {
   render() {
     const { name, email, password, confirm_password } = this.state;
     const { error } = this.props.auth;
+
+    const { isLoggedIn } = this.props.auth;
+
+    //const { from } = this.props.location.state || { from: { pathname: "/" } };
+
+    if (isLoggedIn) {
+      return <Navigate to="/main" />;
+    }
+
     return (
       <div>
         <div className="main">

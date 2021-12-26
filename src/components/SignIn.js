@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { authenticateUser } from "../actions/auth";
 import { Main } from "./index";
+import { Navigate } from "react-router-dom";
 
 class SignIn extends Component {
   constructor() {
@@ -38,6 +39,12 @@ class SignIn extends Component {
   };
   render() {
     const { isLoggedIn } = this.props.auth;
+
+    //const { from } = this.props.location.state || { from: { pathname: "/" } };
+
+    if (isLoggedIn) {
+      return <Navigate to="/main" />;
+    }
 
     return (
       <div>

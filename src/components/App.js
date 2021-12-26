@@ -35,7 +35,7 @@ class App extends Component {
             <Route path="/" element={<Home />} />
             <Route path="/sign-in" element={<SignIn />} />
             <Route path="/sign-up" element={<SignUp />} />
-            <Route path="/main" element={Main} />
+            <Route path="/main" element={<Main />} />
           </Routes>
         </div>
       </Router>

@@ -6,6 +6,7 @@ import {
   CREATE_SESSION,
   CREATE_SESSION_SUCCESS,
   CREATE_SESSION_FAIL,
+  SIGN_OUT,
 } from "../actions/actionTypes";
 
 const inititalUserState = {
@@ -57,6 +58,12 @@ export default function auth(state = inititalUserState, action) {
       return {
         ...state,
         error: null,
+      };
+    case SIGN_OUT:
+      return {
+        ...state,
+        user: {},
+        isLoggedIn: false,
       };
     default:
       return {

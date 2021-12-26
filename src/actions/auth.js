@@ -6,6 +6,7 @@ import {
   CREATE_SESSION,
   CREATE_SESSION_SUCCESS,
   CREATE_SESSION_FAIL,
+  SIGN_OUT,
 } from "./actionTypes";
 import { APIUrls } from "../helpers/getUrl";
 import { getFormBody } from "../helpers/utils";
@@ -53,6 +54,13 @@ export function createSessionFail(error) {
   return {
     type: CREATE_SESSION_FAIL,
     error: error,
+  };
+}
+
+export function signOut() {
+  localStorage.removeItem("token");
+  return {
+    type: SIGN_OUT,
   };
 }
 
@@ -107,5 +115,11 @@ export function authenticateUser(email, password) {
           );
         }
       });
+  };
+}
+
+export function destroySession() {
+  return (dispatch) => {
+    dispatch(signOut());
   };
 }

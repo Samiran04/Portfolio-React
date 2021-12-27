@@ -43,7 +43,7 @@ export default function auth(state = inititalUserState, action) {
         isSignedUp: false,
         isLoggedIn: true,
         error: null,
-        user: action.user,
+        user: action.data,
       };
     case USER_CREATE_FAIL:
     case CREATE_SESSION_FAIL:

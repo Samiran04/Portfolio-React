@@ -539,4 +539,30 @@ ul li a :hover {
   border-radius: 5px;
 }
 
-/*main*/
+/*navbar*/
+
+.navbar {
+  height: 70px;
+  width: 100%;
+  background-color: #ff7200;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.right-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-ele {
+  height: 40px;
+  width: 80px;
+  padding-top: 20px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.nav-ele a {
+  text-decoration: none;
+}

@@ -81,7 +81,7 @@ export function createUser(email, password, confirm_password, name) {
         if (!data.success) {
           dispatch(createUserFail({ error: data.error }));
         } else {
-          dispatch(createUserSuccess());
+          dispatch(createUserSuccess(data.data));
         }
       });
   };

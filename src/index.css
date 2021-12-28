@@ -541,18 +541,35 @@ ul li a :hover {
 
 /*navbar*/
 
-.navbar {
-  height: 70px;
+.navbar-main {
+  height: 120px;
   width: 100%;
-  background-color: #ff7200;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-family: Arial;
+  position: sticky;
+  background-color: white;
 }
 
 .right-nav {
   display: flex;
   flex-direction: row;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+.right-padding-45 {
+  padding-right: 45px;
+}
+
+.main-logo {
+  height: 70px;
+  width: 200px;
+  background: url("./images/logo.png");
+  background-position: center;
+  background-size: cover;
+  padding-top: 30px;
 }
 
 .nav-ele {
@@ -565,4 +582,22 @@ ul li a :hover {
 
 .nav-ele a {
   text-decoration: none;
+  color: black;
+}
+
+/*Create New*/
+
+.create-new {
+  height: 220px;
+  width: 300px;
+  background-color: #7cb9e8;
+  background-image: url("./images/create.png");
+  background-position: center;
+  background-size: 120px;
+  background-repeat: no-repeat;
+  position: relative;
+  left: 40%;
+  top: 50px;
+  border-radius: 15px;
+  cursor: pointer;
 }

@@ -12,11 +12,15 @@ class Navbar extends Component {
   render() {
     const { name } = this.props.auth.user;
     return (
-      <div className="navbar">
-        <div className="left-nav"></div>
+      <div className="navbar-main">
+        <div className="left-nav">
+          <Link to="/">
+            <div className="main-logo"></div>
+          </Link>
+        </div>
 
         <div className="right-nav">
-          <div className="nav-ele">
+          <div className="nav-ele right-padding-45">
             <Link to="#">{name}</Link>
           </div>
 

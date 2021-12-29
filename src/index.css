@@ -601,3 +601,39 @@ ul li a :hover {
   border-radius: 15px;
   cursor: pointer;
 }
+
+.create-new-layer {
+  height: 220px;
+  width: 300px;
+  border-radius: 15px;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.8s ease;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(0, 0, 0, 0.8) 50%
+  );
+  color: white;
+  text-align: center;
+  line-height: 200px;
+  font-size: 20px;
+}
+
+.create-new-layer:hover {
+  opacity: 1;
+}
+
+.components {
+  display: flex;
+  flex-direction: row;
+}
+
+/*Outlet*/
+
+.outlet-cointainer {
+  width: 300px;
+  height: 500px;
+  perspective: 150px;
+  background-color: teal;
+}

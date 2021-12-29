@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { Navigate } from "react-router-dom";
-import { Navbar, CreateNew } from "./index";
+import { Navbar, CreateNew, Outlet } from "./index";
 
 class Main extends Component {
   render() {
@@ -17,7 +17,10 @@ class Main extends Component {
     return (
       <div className="main-home">
         <Navbar />
-        <CreateNew />
+        <div className="components">
+          <CreateNew />
+          <Outlet />
+        </div>
       </div>
     );
   }

@@ -548,7 +548,7 @@ ul li a :hover {
   flex-direction: row;
   justify-content: space-between;
   font-family: Arial;
-  position: sticky;
+  position: fixed;
   background-color: white;
 }
 
@@ -557,6 +557,11 @@ ul li a :hover {
   flex-direction: row;
   padding-top: 20px;
   padding-right: 20px;
+  position: relative;
+}
+
+.left-nav {
+  position: relative;
 }
 
 .right-padding-45 {
@@ -570,6 +575,7 @@ ul li a :hover {
   background-position: center;
   background-size: cover;
   padding-top: 30px;
+  position: relative;
 }
 
 .nav-ele {
@@ -578,6 +584,7 @@ ul li a :hover {
   padding-top: 20px;
   font-size: 17px;
   font-weight: 600;
+  position: relative;
 }
 
 .nav-ele a {
@@ -627,13 +634,33 @@ ul li a :hover {
 .components {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  top: 130px;
 }
 
 /*Outlet*/
 
 .outlet-cointainer {
   width: 300px;
-  height: 500px;
+  height: 200px;
   perspective: 150px;
-  background-color: teal;
+  margin-right: 90px;
+  position: relative;
+  top: 30px;
+}
+
+.inner-box {
+  width: 300px;
+  height: 200px;
+  transform: rotateX(30deg);
+  transition: 0.6s ease-in-out;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.inner-box:hover {
+  width: 370px;
+  height: 450px;
+  transform: rotateX(0deg);
 }

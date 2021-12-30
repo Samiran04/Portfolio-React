@@ -20,7 +20,6 @@ class Main extends Component {
         <div className="components">
           <CreateNew />
           <Outlet />
-          <Outlet />
         </div>
       </div>
     );

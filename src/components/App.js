@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { SignIn, SignUp, Home, Main } from "./index";
+import { SignIn, SignUp, Home, Main, Design } from "./index";
 import {
   BrowserRouter as Router,
   Redirect,
@@ -36,6 +36,7 @@ class App extends Component {
             <Route path="/sign-in" element={<SignIn />} />
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/main" element={<Main />} />
+            <Route path="/test" element={<Design />} />
           </Routes>
         </div>
       </Router>
